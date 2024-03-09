@@ -1,21 +1,22 @@
 namespace EncoderHub;
 
-public static class EncoderFactory
+public class EncoderFactory()
 {
-    public static IEnumerable<string> ListAllEncoders()
+    
+    private IEncoderStore _encoderStore = new EncoderStore();
+    
+    public EncoderFactory(IEncoderStore encoderStore) : this()
     {
-        return EncoderStore.Encoders.Keys;
+        _encoderStore = encoderStore;
     }
 
-    public static IEncoder GetEncoder(string encoderName)
+    public IEnumerable<string> ListAllEncoders()
     {
-        try
-        {
-            return EncoderStore.Encoders[encoderName];
-        }
-        catch (KeyNotFoundException)
-        {
-            throw new EncoderNotFoundException(encoderName);
-        }
+        return _encoderStore.AllEncoders();
+    }
+
+    public IEncoder GetEncoder(string encoderName)
+    {
+        return _encoderStore.GetEncoder(encoderName);
     }
 }

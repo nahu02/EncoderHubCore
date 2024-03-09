@@ -1,9 +1,35 @@
 namespace EncoderHub;
 
-public static class EncoderStore
+public class EncoderStore : IEncoderStore
 {
-    public static readonly Dictionary<string, IEncoder> Encoders = new()
+    private readonly Dictionary<string, Lazy<IEncoder>> _encoders = new()
     {
-        // {"encoder_name", class instance},
+        // {"encoder_name", new Lazy<IEncoder>(() => new EncoderClass())},
     };
+    
+    public IEnumerable<string> AllEncoders()
+    {
+        return _encoders.Keys;
+    }
+
+    public IEncoder GetEncoder(string encoderName)
+    {
+        try
+        {
+            return _encoders[encoderName].Value;
+        }
+        catch (KeyNotFoundException)
+        {
+            throw new EncoderNotFoundException(encoderName);
+        }
+    }
+    
+    /*
+    private EncoderClass CreateEncoderClass()
+    {
+        EncoderClass encoder = new();
+        // Set properties, initialize, etc.
+        return encoder;
+    }
+     */
 }

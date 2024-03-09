@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5345cbd2-fe1b-435a-85cb-6cfe07bc58bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EncoderNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EncoderStore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IEncoderStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EncoderHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EncoderHub/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EncoderFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EncoderFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EncoderStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EncoderStore.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/nahu02/Documents/BME/ÖnLab/Core/EncoderHub/EncoderFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../EncoderHub.Tests/EncoderFactoryTest.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -78,6 +79,17 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="wireframe created" />
