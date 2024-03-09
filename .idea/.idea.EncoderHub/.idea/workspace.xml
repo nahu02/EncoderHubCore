@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5345cbd2-fe1b-435a-85cb-6cfe07bc58bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IEncoderStore.cs" afterDir="false" />
+    <list default="true" id="5345cbd2-fe1b-435a-85cb-6cfe07bc58bc" name="Changes" comment="EncoderStore takes care of Encoder initialization">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EncoderHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EncoderHub/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EncoderFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EncoderFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EncoderStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EncoderStore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IEncoder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IEncoderStore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IEncoderStore.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../EncoderHub.Tests/EncoderFactoryTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nahu02/Documents/BME/ÖnLab/Core/EncoderHub/EncoderFactory.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -33,26 +34,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rider.code.cleanup.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/nahu02/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/nahu02/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/nahu02/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/nahu02/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/nahu02/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/home/nahu02/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709460115220</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="EncoderStore takes care of Encoder initialization">
+      <option name="closed" value="true" />
+      <created>1709992623560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709992623561</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +104,11 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="wireframe created" />
-    <option name="LAST_COMMIT_MESSAGE" value="wireframe created" />
+    <MESSAGE value="EncoderStore takes care of Encoder initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="EncoderStore takes care of Encoder initialization" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
