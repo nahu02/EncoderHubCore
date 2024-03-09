@@ -6,7 +6,7 @@ public class EncoderStore : IEncoderStore
 {
     private readonly Dictionary<string, Lazy<IEncoder>> _encoders = new()
     {
-        // {"encoder_name", new Lazy<IEncoder>(() => new EncoderClass())},
+        // {"encoder_name", new Lazy<IEncoder>(() => CreateEncoderClass())},
     };
     
     public IEnumerable<string> AllEncoders()
