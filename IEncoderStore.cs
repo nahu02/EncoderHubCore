@@ -18,7 +18,7 @@ public interface IEncoderStore
     ///     Get an encoder by its name.
     /// </summary>
     /// <param name="encoderName">Name of an encoder as listed by <see cref="AllEncoders" /></param>
-    /// <exception cref="EncoderNotFoundException">When the encoder with the given name could not be found</exception>
+    /// <exception cref="EncoderHub.Exceptions.EncoderNotFoundException">When the encoder with the given name could not be found</exception>
     /// <returns>IEncoder instance of encoder</returns>
     IEncoder GetEncoder(string encoderName);
 }

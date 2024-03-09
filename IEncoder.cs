@@ -16,6 +16,7 @@ public interface IEncoder
     ///     Concerts the message to a different format in a way that is specific to the encoder.
     ///     The <see cref="Description"/> property should contain information about the expected input and output.
     /// </summary>
+    /// <exception cref="EncoderHub.Exceptions.EncodingException">When the message could not successfully be encoded</exception>
     /// <param name="message">Message to be encoded</param>
     /// <returns>Task representing the encoding process</returns>
     Task<string> Encode(string message);

@@ -1,3 +1,5 @@
+using EncoderHub.Exceptions;
+
 namespace EncoderHub;
 
 public class EncoderStore : IEncoderStore
