@@ -26,6 +26,11 @@ public class EncoderStore : IEncoderStore
         }
     }
     
+    public void AddEncoder(string encoderName, Lazy<IEncoder> encoder)
+    {
+        _encoders.Add(encoderName, encoder);
+    }
+    
     /*
     private EncoderClass CreateEncoderClass()
     {
