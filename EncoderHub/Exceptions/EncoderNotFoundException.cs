@@ -10,4 +10,8 @@ public class EncoderNotFoundException : Exception
         : base($"Encoder with name {encoderName} not found.")
     {
     }
+    
+    public EncoderNotFoundException(string message, Exception innerException) : base(message, innerException)
+    {
+    }
 }
