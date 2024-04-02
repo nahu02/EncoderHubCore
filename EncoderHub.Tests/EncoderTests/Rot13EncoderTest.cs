@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using EncoderHub.Encoders;
 using NUnit.Framework;
@@ -8,13 +7,13 @@ namespace EncoderHub.Tests.EncoderTests;
 [TestFixture]
 public class Rot13EncoderTests
 {
-    private Rot13Encoder _rot13Encoder;
-
     [SetUp]
     public void Setup()
     {
         _rot13Encoder = new Rot13Encoder();
     }
+
+    private Rot13Encoder _rot13Encoder;
 
     [Test]
     public async Task Encode_ShouldReturnRot13EncodedString_WhenInputIsLowercaseLetters()
@@ -57,7 +56,7 @@ public class Rot13EncoderTests
         var result = await _rot13Encoder.Encode("");
         Assert.That(result, Is.EqualTo(""));
     }
-    
+
     [Test]
     public async Task Encode_ShouldReturnOriginalString_WhenEncodingLongStringTwice()
     {
