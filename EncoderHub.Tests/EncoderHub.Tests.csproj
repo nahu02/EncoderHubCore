@@ -4,6 +4,9 @@
         <TargetFrameworks>net8.0</TargetFrameworks>
 
         <IsPackable>false</IsPackable>
+        
+        <!--The user secrets id is the same as in the main project-->
+        <UserSecretsId>d4fb6b64-acd2-48cc-8645-8df53256ef85</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
