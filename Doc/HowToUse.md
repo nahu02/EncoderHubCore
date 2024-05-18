@@ -1,5 +1,7 @@
 # How to use the library
 
+This document is about how to use the library. Instructions on how to add it to your project as a dependency can be found [here](./UsingTheNugetPackageFromGithub.md).
+
 This library is designed to be easy to use. The main class is `EncoderFactory`, which is a factory class that creates
 encoders. This class is initialized with an `IEncoderStore` object, which is a collection of all the encoders available.
 The base implementation of this interface is `EncoderStore`, which includes all the encoders that come with the library.
