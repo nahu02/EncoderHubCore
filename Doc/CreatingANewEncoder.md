@@ -12,6 +12,7 @@ projects or submit a pull request to have your encoder added to the main library
    method
 3. If you have many encoders, you may wish to extend the `EncoderStore` class to include your encoders in
    its `InitialEncoders` method
+4. Create the `EncoderFactory` instance by supplying it your own `EncoderStore` instance; e.g. `var ef = new EncoderFactory(myEncoderStore)`.
 
 ## Adding a new encoder to the library
 
