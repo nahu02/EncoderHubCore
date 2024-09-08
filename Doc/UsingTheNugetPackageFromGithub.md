@@ -9,7 +9,7 @@
    Make sure to insert your own github username and your access token where needed!
 4. Add the package as a dependency to your project using
    ```
-   dotnet nuget add package EncoderHub
+   dotnet add package EncoderHub
    ```
    
 
