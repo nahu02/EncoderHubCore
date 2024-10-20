@@ -12,10 +12,10 @@ public class EncoderStore : IEncoderStore
 
     public EncoderStore()
     {
-        _configRoot =
-            new ConfigurationBuilder()
-                .AddUserSecrets<EncoderStore>()
-                .Build();
+        _configRoot = new ConfigurationBuilder()
+            .AddEnvironmentVariables()
+            .AddUserSecrets<EncoderStore>()
+            .Build();
 
         _encoders = InitialEncoders();
     }
@@ -65,7 +65,9 @@ public class EncoderStore : IEncoderStore
         var apiKey = _configRoot["MsTranslate:ApiKey"];
 
         if (string.IsNullOrWhiteSpace(apiKey))
-            throw new EncoderConfigurationException("MsTranslate:ApiKey is missing from the configuration.");
+            throw new EncoderConfigurationException(
+                "MsTranslate:ApiKey is missing from the configuration."
+            );
 
         return new MsTranslateToEnglishEncoder(apiKey);
     }
