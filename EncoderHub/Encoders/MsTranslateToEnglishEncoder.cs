@@ -17,7 +17,7 @@ public class MsTranslateToEnglishEncoder : IEncoder
     public MsTranslateToEnglishEncoder(string apiKey)
     {
         _apiKey = apiKey;
-        _apiUri = new Uri("https://microsoft-translator-text.p.rapidapi.com/translate?api-version=3.0&to=en");
+        _apiUri = new Uri("https://deep-translate1.p.rapidapi.com/language/translate/v2");
     }
 
     public string Description =>
@@ -31,9 +31,10 @@ public class MsTranslateToEnglishEncoder : IEncoder
     {
         var client = new HttpClient();
 
-        var jsonContent = JsonSerializer.Serialize(new[]
+        var jsonContent = JsonSerializer.Serialize(new
         {
-            new { Text = message }
+            q = message,
+            target = "en" 
         });
 
         var request = new HttpRequestMessage
@@ -43,7 +44,7 @@ public class MsTranslateToEnglishEncoder : IEncoder
             Headers =
             {
                 { "X-RapidAPI-Key", _apiKey },
-                { "X-RapidAPI-Host", "microsoft-translator-text.p.rapidapi.com" }
+                { "X-RapidAPI-Host", "deep-translate1.p.rapidapi.com" }
             },
             Content = new StringContent(
                 jsonContent,
@@ -63,32 +64,27 @@ public class MsTranslateToEnglishEncoder : IEncoder
 
         var responseBody = await response.Content.ReadAsStringAsync();
 
-        var translationResponses =
-            JsonConvert.DeserializeObject<TranslationResponse[]>(responseBody)
+        var translationResponse =
+            JsonConvert.DeserializeObject<TranslationResponse>(responseBody)
             ?? throw new EncodingException("Failed to deserialize response from API.");
 
-        var translatedMessage = translationResponses[0].translations[0].text;
+        var translatedMessage = translationResponse.data.translations.translatedText;
         return translatedMessage;
     }
 
     internal record TranslationResponse
     {
-        public DetectedLanguage detectedLanguage { get; set; }
-
-        public Translations[] translations { get; set; }
+        public Data data { get; set; }
     }
 
-    internal record DetectedLanguage
+    internal record Data
     {
-        public string language { get; set; }
-
-        public double score { get; set; }
+        public Translation translations { get; set; }
     }
 
-    internal record Translations
+    internal record Translation
     {
-        public string text { get; set; }
+        public string translatedText { get; set; }
 
-        public string to { get; set; }
     }
 }
